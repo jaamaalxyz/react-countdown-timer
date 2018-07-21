@@ -13,6 +13,14 @@ class App extends Component {
     }
   }
 
+  // bind the method to the constructor
+  handleChange = this.handleChange.bind(this);
+  handleChange(event) {
+    this.setState({
+      minutes: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="App">
