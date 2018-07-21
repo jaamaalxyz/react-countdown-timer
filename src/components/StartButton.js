@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class StartButton extends React.Component {
+class StartButton extends Component {
   render() {
     return (
       <div style={{ marginLeft: 130 }}>

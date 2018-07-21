@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class TimerInput extends React.Component {
+class TimerInput extends Component {
   render() {
     return (
       <div style={{marginLeft:100}}>

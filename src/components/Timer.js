@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Timer extends React.Component {
+class Timer extends Component {
   render() {
     return (
       <div>
