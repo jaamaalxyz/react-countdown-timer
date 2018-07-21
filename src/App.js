@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TimerInput minutes ={this.state.minutes} />
+        <TimerInput minutes ={this.state.minutes} handleChange={this.handleChange} />
         <Timer minutes={this.state.minutes} seconds={this.state.seconds} />
         <StartButton />
       </div>
