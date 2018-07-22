@@ -1,13 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import './App.css';
 
-
-import "./styles.css";
-
-class TimerInput extends React.Component {
+class TimerInput extends Component {
   render() {
     return (
-      <div style={{marginLeft:100}}>
+      <div style={{marginLeft: 400, marginTop: 100}}>
         <h3>Input your desired time</h3>
         <input type="number" value={this.props.value} onChange={this.props.handleChange} required />
       </div>
@@ -15,20 +13,20 @@ class TimerInput extends React.Component {
   }
 }
 
-class Timer extends React.Component {
+class Timer extends Component {
   render() {
     return (
       <div>
-        <h1 style={{ fontSize: 100, marginLeft:100 }}>{this.props.value}:{this.props.seconds}</h1>
+        <h1 style={{ fontSize: 100, marginLeft:370 }}>{this.props.value}:{this.props.seconds}</h1>
       </div>
     );
   }
 }
 
-class StartButton extends React.Component {
+class StartButton extends Component {
   render() {
     return (
-      <div style={{ marginLeft: 130 }}>
+      <div style={{ marginLeft: 460 }}>
         <button className="btn btn-lg btn-success" disabled={!this.props.value} onClick={this.props.startCountDown}>Start</button>
       </div>
 
@@ -36,12 +34,12 @@ class StartButton extends React.Component {
   }
 }
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       seconds: '00',
-      value: '',
+      value: '25',
       isClicked : false
     }
     this.secondsRemaining;
@@ -110,7 +108,7 @@ class App extends React.Component {
         </div>
       </div>
     );
-    }else{
+    } else{
       return (
         <div>
           <div className="row">
@@ -126,5 +124,6 @@ class App extends React.Component {
     }
   }
 }
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
