@@ -5,9 +5,20 @@ import './App.css';
 class TimerInput extends Component {
   render() {
     return (
-      <div style={{marginLeft: 400, marginTop: 100}}>
-        <h3>Input your desired time</h3>
-        <input type="number" value={this.props.value} onChange={this.props.handleChange} required />
+      <div>
+        <h3
+          className="timer-input-h1"
+        >React Count Down Timer</h3>
+        <label 
+          className="timer-input"
+          for="timer-input"
+        >Input your desired time: <input 
+            type="number" 
+            value={this.props.value} 
+            onChange={this.props.handleChange} 
+            required 
+          />
+        </label>
       </div>
     );
   }
@@ -17,7 +28,9 @@ class Timer extends Component {
   render() {
     return (
       <div>
-        <h1 style={{ fontSize: 100, marginLeft:370 }}>{this.props.value}:{this.props.seconds}</h1>
+        <h1
+          className="timer"
+        >{this.props.value}:{this.props.seconds}</h1>
       </div>
     );
   }
@@ -26,8 +39,14 @@ class Timer extends Component {
 class StartButton extends Component {
   render() {
     return (
-      <div style={{ marginLeft: 460 }}>
-        <button className="btn btn-lg btn-success" disabled={!this.props.value} onClick={this.props.startCountDown}>Start</button>
+      <div>
+        <button 
+          className="start-btn"
+          disabled={!this.props.value} 
+          onClick={this.props.startCountDown}
+        >
+          Start
+        </button>
       </div>
 
     );
@@ -97,28 +116,31 @@ class App extends Component {
 
   render() {
     const clicked = this.state.isClicked;
+
     if(clicked){
-    return (
-      <div>
-        <div className="row">
-          <div className="col-md-4"></div>
-          <div className="col-md-4">
-            <Timer value={this.state.value} seconds={this.state.seconds} />
-          </div>
-        </div>
-      </div>
-    );
-    } else{
       return (
-        <div>
-          <div className="row">
-            <div className="col-md-4"></div>
-            <div className="col-md-4">
-              <TimerInput value={this.state.value} handleChange={this.handleChange} />
-              <Timer value={this.state.value} seconds={this.state.seconds} />
-              <StartButton startCountDown={this.startCountDown} value={this.state.value} />
-            </div>
-          </div>
+        <div className="App">
+          <Timer 
+            value={this.state.value} 
+            seconds={this.state.seconds} 
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <TimerInput 
+            value={this.state.value} 
+            handleChange={this.handleChange} 
+          />
+          <Timer 
+            value={this.state.value} 
+            seconds={this.state.seconds} 
+          />
+          <StartButton 
+            startCountDown={this.startCountDown} 
+            value={this.state.value} 
+          />
         </div>
       );
     }

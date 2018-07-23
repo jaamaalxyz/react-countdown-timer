@@ -2,3 +2,37 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.timer-input-h1 {
+  text-transform: uppercase;
+  color: chocolate;
+  font-size: 48px;
+}
+
+.timer-input {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.timer-input > input {
+  font-size: 36px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.timer {
+  font-weight: 700;
+  font-size: 72px;
+  color: firebrick;
+}
+
+.start-btn {
+  padding: 5px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  font-size: 36px;
+  color: green;
+  background-color: darkgoldenrod;
+  border: 2px solid darkkhaki;
+  border-radius: 10px;
+}
