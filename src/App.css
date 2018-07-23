@@ -36,3 +36,12 @@
   border: 2px solid darkkhaki;
   border-radius: 10px;
 }
+
+.footer {
+  position: relative;
+  top: 50px;
+}
+
+.heart {
+  color: red;
+}

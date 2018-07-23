@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TimerInput } from './components/TimerInput';
 import { Timer } from './components/Timer';
 import { StartButton } from './components/StartButton'
+import './App.css';
 
 export class App extends Component {
   constructor(props) {
@@ -91,6 +92,9 @@ export class App extends Component {
             startCountDown={this.startCountDown} 
             value={this.state.value} 
           />
+          <div className="footer">
+            <h2>Build with <span className="heart">&#x2764;</span> by <a href="https://jamal-pb95.github.io/">Md. Jamal Uddin</a></h2>
+          </div>
         </div>
       );
     }
