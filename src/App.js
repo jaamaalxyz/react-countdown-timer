@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { TimerInput } from './components/TimerInput';
 import { Timer } from './components/Timer';
-import { StartButton } from './components/StartButton'
+import { StartButton } from './components/StartButton';
+import { StopButton } from './components/StopButton';
 import './App.css';
 
 export class App extends Component {
@@ -75,6 +76,7 @@ export class App extends Component {
             value={this.state.value} 
             seconds={this.state.seconds} 
           />
+          <StopButton />
         </div>
       );
     } else {
