@@ -26,9 +26,10 @@
   color: firebrick;
 }
 
-.start-btn, .stop-btn {
+.start-btn,
+.stop-btn {
   padding: 5px 20px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 900;
   font-size: 36px;
   color: green;
